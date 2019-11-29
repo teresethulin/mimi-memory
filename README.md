@@ -10,22 +10,32 @@
 
 A JavaScript memory game dedicated to one of the best-selling music artists of all time: Mariah Carey.
 
-## Built with
-- HTML
-- CSS
-- JavaScript
-
-## License
-MIT License
-
 
 ## Play game:
 
 https://mimi-memory.netlify.com/
 
 
+## Built with
+- HTML
+- CSS
+- JavaScript
+
+
 ## Authors
 - [Terese Thulin](https://github.com/teresethulin)
+
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details
+
+
+## Testers
+-
+-
+
+
+## Code review
 
 
 ## Acknowledgments
