@@ -27,7 +27,7 @@ https://mimi-memory.netlify.com/
 
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/teresethulin/mimi-memory/blob/master/LICENSE) for details
 
 
 ## Testers
