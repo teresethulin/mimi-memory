@@ -15,6 +15,7 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    perspective: 80vw;
 }
 
 .card {
@@ -22,6 +23,8 @@ body {
     height: 25%;
     position: relative;
     transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 1.2s;
 }
 
 .card:active {
@@ -40,4 +43,9 @@ body {
     height: 100%;
     padding: 3%;
     border-radius: 5%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
 }
