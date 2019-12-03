@@ -17,35 +17,3 @@ body {
     flex-wrap: wrap;
     perspective: 80vw;
 }
-
-.card {
-    width: 25%;
-    height: 25%;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform 1.2s;
-}
-
-.card:active {
-    transform: scale(.95);
-    transition: transform .4s;
-}
-
-.card.flip {
-    transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 3%;
-    border-radius: 5%;
-    backface-visibility: hidden;
-}
-
-.card-front {
-    transform: rotateY(180deg);
-}
