@@ -35,13 +35,13 @@ const flipCard = (event) => {
 const checkForMatch = () => {
 
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disableCards();
+        lockMatchedCards();
     } else {
         unflipCards();
     }
 }
 
-const disableCards = () => {
+const lockMatchedCards = () => {
 
     // it's a match!
     firstCard.removeEventListener('click', flipCard);
