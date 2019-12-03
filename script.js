@@ -38,7 +38,7 @@ const gameBoard = document.querySelector('.gameboard');
 const cards = document.querySelectorAll('.card');
 const button = document.querySelector('.replay-button');
 
-// Create cards by looping through image array and adding to gameboard element
+// Create cards by looping through image array and adding them to gameboard element
 for (let i = 0; i < cardFrontImages.length; i++) {
     gameBoard.innerHTML += createCards(cardFrontImages, i);
 }

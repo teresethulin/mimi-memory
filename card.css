@@ -1,7 +1,6 @@
 .card {
-    width: 25%;
-    height: 25%;
-    background-color: palevioletred;
+    /* width: 90%;
+    height: 90%; */
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;

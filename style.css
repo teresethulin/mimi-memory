@@ -16,9 +16,12 @@ body {
     height: 40vw;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     perspective: 80vw;
+    background-color: palevioletred;
+    padding: 1%;
+    border-radius: 3%;
 }
 
 button {
@@ -30,5 +33,5 @@ button {
     font-size: 1em;
     margin-bottom: 5vh;
     cursor: pointer;
-    background-color: palevioletred;
+    background-color: rgb(231, 145, 174);
 }
