@@ -6,6 +6,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+// Flip cards on click and check for match
 const flipCard = (event) => {
 
     if (lockBoard) return;
