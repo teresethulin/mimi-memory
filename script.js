@@ -38,14 +38,17 @@ const gameBoard = document.querySelector('.gameboard');
 const cards = document.querySelectorAll('.card');
 const button = document.querySelector('.replay-button');
 
+
 // Create cards by looping through image array and adding them to gameboard element
 for (let i = 0; i < cardFrontImages.length; i++) {
     gameBoard.innerHTML += createCards(cardFrontImages, i);
 }
 
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
 
 // Flip cards on click and check for match
 const flipCard = (event) => {
@@ -114,15 +117,6 @@ const resetBoard = () => {
     secondCard = null;
 }
 
-
-// Shuffle cards - immediately invoked
-(() => {
-    cards.forEach(card => {
-        let randomPosition = Math.floor(Math.random() * 16);
-
-        card.style.order = randomPosition;
-    });
-})();
 
 // Restart game
 button.addEventListener('click', startGame);
