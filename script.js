@@ -100,6 +100,9 @@ const flipCard = (event) => {
 const startGame = () => {
     pairs = 0;
     gameBoard.innerHTML = "";
+
+    const backgroundMusic = new Audio('./media/audio/mimi-mingle-pitched.mp3');
+
     const shuffledImages = shuffleCards(allImages);
     shuffledImages.forEach(image => {
 
@@ -172,7 +175,6 @@ const cardsMatched = () => {
     secondCard.removeEventListener('click', flipCard);
     cardSoundOnClick.play();
     pairs += 1;
-    console.log(pairs);
 
     resetBoard();
 }
