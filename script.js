@@ -42,6 +42,15 @@ const cardImages = [{
 // Duplicates array so we now have 8x8 images
 const allImages = cardImages.concat(cardImages);
 
+const shuffleCards = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+const shuffledImages = shuffleCards(allImages);
 
 // Create cards with data from the image array
 const createCards = (name, image) => {
@@ -88,7 +97,7 @@ const flipCard = (event) => {
 
 // Generate cards to game board
 const generateCards = () => {
-    allImages.forEach(image => {
+    shuffledImages.forEach(image => {
 
         const cardFront = createCards(image.name, image.image);
         gameBoard.innerHTML += cardFront;
