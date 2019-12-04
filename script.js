@@ -61,25 +61,28 @@ const resetBoard = () => {
 
 
 const flipCard = (event) => {
-    console.log(firstCard);
 
     if (lockBoard) return;
-    if (event.currentTarget === firstCard)
-        event.currentTarget.classList.add('flip');
 
+
+
+    if (event.currentTarget === firstCard) return;
+
+    event.currentTarget.classList.add('flip');
 
     if (!hasFlippedCard) {
         //first click
         hasFlippedCard = true;
         firstCard = event.currentTarget;
-
         return;
+
     } else {
         //second click
         hasFlippedCard = false;
         secondCard = event.currentTarget;
 
         checkForMatch();
+
     }
 }
 
@@ -96,11 +99,9 @@ const generateCards = () => {
 generateCards();
 
 
-// Default values for cards
-let firstCard, secondCard;
+// Default values
 let hasFlippedCard, lockBoard = false;
-
-
+let firstCard, secondCard;
 
 
 // Function for checking if cards match
@@ -129,7 +130,8 @@ const unflipCards = () => {
         secondCard.classList.remove('flip');
 
         lockBoard = false;
-
+        firstCard = null;
+        secondCard = null;
     }, 1500);
 
 }
@@ -144,6 +146,6 @@ const cardsMatched = () => {
     // it's a match!
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    // cardSoundOnClick.play();
+    cardSoundOnClick.play();
     resetBoard();
 }

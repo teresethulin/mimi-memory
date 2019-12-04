@@ -28,9 +28,11 @@ h1 {
     width: 40vw;
     height: 40vw;
     margin: auto;
-    display: grid;
+    display: flex;
+    flex-flow: wrap;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr); */
     perspective: 80vw;
     /* background-color: palevioletred; */
     padding: 1%;
