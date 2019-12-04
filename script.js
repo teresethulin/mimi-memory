@@ -1,6 +1,11 @@
 "use strict"
 
-const cardFrontImages = [{
+const gameBoard = document.querySelector('.gameboard');
+const cardsFlipped = document.querySelectorAll('.card-front');
+const button = document.querySelector('.replay-button');
+
+
+const cardImages = [{
         image: 'http://los40es00.epimg.net/los40/imagenes/2009/08/02/actualidad/1249164000_294754_1273518780.jpg',
         name: 'eminem'
     },
@@ -34,40 +39,43 @@ const cardFrontImages = [{
     },
 ]
 
-const gameBoard = document.querySelector('.gameboard');
-const cards = document.querySelectorAll('.card');
-const button = document.querySelector('.replay-button');
+// Duplicates array so we now have 8x8 images
+const allImages = cardImages.concat(cardImages);
 
 
-// Create cards by looping through image array and adding them to gameboard element
-for (let i = 0; i < cardFrontImages.length; i++) {
-    gameBoard.innerHTML += createCards(cardFrontImages, i);
+// Create cards with data from the image array
+const createCards = (name, image) => {
+    return `<div class="card" data-id=${name}>
+    <img class="card-front" src="${image}">
+    <img class="card-back" src="https://citychickbuzz.files.wordpress.com/2012/06/mclogo.jpg">
+    </div>`;
+};
+
+// Resets board
+const resetBoard = () => {
+    hasFlippedCard = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
 }
 
 
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
-
-
-// Flip cards on click and check for match
 const flipCard = (event) => {
+    console.log(firstCard);
 
     if (lockBoard) return;
+    if (event.currentTarget === firstCard)
+        event.currentTarget.classList.add('flip');
 
-    if (event.currentTarget === firstCard) return;
-
-    event.currentTarget.classList.add('flip');
 
     if (!hasFlippedCard) {
-
-        // first click
+        //first click
         hasFlippedCard = true;
         firstCard = event.currentTarget;
 
+        return;
     } else {
-
-        // second click
+        //second click
         hasFlippedCard = false;
         secondCard = event.currentTarget;
 
@@ -75,25 +83,41 @@ const flipCard = (event) => {
     }
 }
 
-// check if cards match
+// Generate cards to game board
+const generateCards = () => {
+    allImages.forEach(image => {
+
+        const cardFront = createCards(image.name, image.image);
+        gameBoard.innerHTML += cardFront;
+    });
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => card.addEventListener('click', flipCard));
+};
+generateCards();
+
+
+// Default values for cards
+let firstCard, secondCard;
+let hasFlippedCard, lockBoard = false;
+
+
+
+
+// Function for checking if cards match
 const checkForMatch = () => {
 
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        lockMatchedCards();
+    if (firstCard.dataset.id === secondCard.dataset.id) {
+        cardsMatched();
+
     } else {
         unflipCards();
     }
 }
 
-const lockMatchedCards = () => {
 
-    // it's a match!
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
 
-    resetBoard();
-}
 
+// Function for unflipping cards if it's not a match
 const unflipCards = () => {
 
     lockBoard = true;
@@ -110,15 +134,16 @@ const unflipCards = () => {
 
 }
 
-const resetBoard = () => {
-    hasFlippedCard = false;
-    lockBoard = false;
-    firstCard = null;
-    secondCard = null;
+
+// Audio that plays if cards match
+const cardSoundOnClick = new Audio('./media/audio/mimi-jingle-2x.mp3');
+
+// Function for locking clicked cards if it's a match
+const cardsMatched = () => {
+
+    // it's a match!
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    // cardSoundOnClick.play();
+    resetBoard();
 }
-
-
-// Restart game
-button.addEventListener('click', startGame);
-
-cards.forEach(card => card.addEventListener('click', flipCard));

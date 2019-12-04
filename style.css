@@ -9,6 +9,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: source-code-pro,
+        monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo {
+    width: 4vw;
+}
+
+h1 {
+    font-family: serif;
+    font-weight: 700;
 }
 
 .gameboard {
@@ -19,7 +32,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     perspective: 80vw;
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
     padding: 1%;
     border-radius: 3%;
 }
@@ -27,11 +40,26 @@ body {
 button {
     width: 10vw;
     height: 5vh;
-    border: none;
-    border-radius: 4%;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+    color: rgba(0, 0, 0, 0.3);
     text-align: center;
+    text-transform: uppercase;
+    font-family: source-code-pro,
+        monospace;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1em;
+    letter-spacing: 0.1em;
     margin-bottom: 5vh;
     cursor: pointer;
-    background-color: rgb(231, 145, 174);
+    background-color: transparent;
+    transition: border-color .45s cubic-bezier(0.25, 1, 0.33, 1),
+        color .45s cubic-bezier(0.25, 1, 0.33, 1);
+}
+
+button:hover {
+    background-color: #D5B187;
+    color: white;
+    border: 2px solid white;
 }
