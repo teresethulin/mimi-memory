@@ -30,11 +30,7 @@ h1 {
     margin: auto;
     display: flex;
     flex-flow: wrap;
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr); */
     perspective: 80vw;
-    /* background-color: palevioletred; */
     padding: 1%;
     border-radius: 3%;
 }
@@ -64,4 +60,18 @@ button:hover {
     background-color: #D5B187;
     color: white;
     border: 2px solid white;
+}
+
+.you-won {
+    width: 95%;
+    height: 95%;
+    background-color: rgba(213, 177, 135, .7);
+    color: white;
+    font-size: 4em;
+    font-weight: 700;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }

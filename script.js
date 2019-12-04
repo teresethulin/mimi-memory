@@ -1,7 +1,9 @@
 "use strict"
 
+
 const gameBoard = document.querySelector('.gameboard');
 const cardsFlipped = document.querySelectorAll('.card-front');
+let pairs = 0;
 
 
 const cardImages = [{
@@ -96,8 +98,7 @@ const flipCard = (event) => {
 
 // Generate cards to game board
 const startGame = () => {
-    console.log('hej');
-
+    pairs = 0;
     gameBoard.innerHTML = "";
     const shuffledImages = shuffleCards(allImages);
     shuffledImages.forEach(image => {
@@ -121,6 +122,17 @@ const checkForMatch = () => {
 
     if (firstCard.dataset.id === secondCard.dataset.id) {
         cardsMatched();
+
+        const gameCompleted = () => {
+            if (pairs === 8) {
+                const section = document.querySelector('section');
+                const endOfGameAnimation = document.createElement('div');
+                endOfGameAnimation.classList.add('you-won');
+                endOfGameAnimation.textContent = "You won!";
+                section.appendChild(endOfGameAnimation);
+            }
+        }
+        gameCompleted();
 
     } else {
         unflipCards();
@@ -159,6 +171,9 @@ const cardsMatched = () => {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     cardSoundOnClick.play();
+    pairs += 1;
+    console.log(pairs);
+
     resetBoard();
 }
 
