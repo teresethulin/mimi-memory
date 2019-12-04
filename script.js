@@ -129,10 +129,10 @@ const checkForMatch = () => {
         const gameCompleted = () => {
             if (pairs === 8) {
                 const section = document.querySelector('section');
-                const endOfGameAnimation = document.createElement('div');
-                endOfGameAnimation.classList.add('you-won');
-                endOfGameAnimation.textContent = "You won!";
-                section.appendChild(endOfGameAnimation);
+                const endOfGameScreen = document.createElement('div');
+                endOfGameScreen.classList.add('you-won');
+                endOfGameScreen.textContent = "You won!";
+                section.appendChild(endOfGameScreen);
             }
         }
         gameCompleted();
