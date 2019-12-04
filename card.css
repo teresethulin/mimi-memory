@@ -1,10 +1,12 @@
 .card {
-    width: 25%;
-    height: 25%;
+    width: 23%;
+    height: 23%;
+    margin: 1%;
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform 1.2s;
+    border-radius: 5%;
 }
 
 .card:active {
@@ -28,5 +30,5 @@
 
 .card-front {
     transform: rotateY(180deg);
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.3);
 }
