@@ -18,11 +18,12 @@ body {
 
 .logo {
     width: 4vw;
+    margin-top: 2vh;
 }
 
 h1 {
-    font-family: serif;
-    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+    margin-top: 3vh;
 }
 
 .gameboard {
