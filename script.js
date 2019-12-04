@@ -2,7 +2,6 @@
 
 const gameBoard = document.querySelector('.gameboard');
 const cardsFlipped = document.querySelectorAll('.card-front');
-const button = document.querySelector('.replay-button');
 
 
 const cardImages = [{
@@ -50,7 +49,7 @@ const shuffleCards = (array) => {
     return array;
 }
 
-const shuffledImages = shuffleCards(allImages);
+
 
 // Create cards with data from the image array
 const createCards = (name, image) => {
@@ -96,7 +95,11 @@ const flipCard = (event) => {
 }
 
 // Generate cards to game board
-const generateCards = () => {
+const startGame = () => {
+    console.log('hej');
+
+    gameBoard.innerHTML = "";
+    const shuffledImages = shuffleCards(allImages);
     shuffledImages.forEach(image => {
 
         const cardFront = createCards(image.name, image.image);
@@ -105,7 +108,7 @@ const generateCards = () => {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => card.addEventListener('click', flipCard));
 };
-generateCards();
+startGame();
 
 
 // Default values
@@ -158,3 +161,14 @@ const cardsMatched = () => {
     cardSoundOnClick.play();
     resetBoard();
 }
+
+// const startGame = () => {
+//     generateCards();
+
+// }
+
+
+const button = document.querySelector('.replay-button');
+
+// Restart game
+button.addEventListener('click', startGame);
