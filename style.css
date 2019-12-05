@@ -67,19 +67,22 @@ button {
 
 button:hover {
     color: white;
+    background-color: var(--purple);
     border: 2px solid white;
 }
 
 .you-won {
-    width: 95%;
-    height: 95%;
-    background-color: rgba(213, 177, 135, .7);
-    color: white;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    color: var(--black);
+    background-color: var(--palepink);
+    opacity: .9;
     font-size: 4em;
     font-weight: 700;
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
     z-index: 1;
 }

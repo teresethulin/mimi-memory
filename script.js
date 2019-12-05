@@ -138,12 +138,12 @@ const checkForMatch = () => {
 
         // End of game screen
         const gameCompleted = () => {
-            if (pairs === 8) {
+            if (pairs === 1) {
                 const section = document.querySelector('section');
                 const endOfGameScreen = document.createElement('div');
                 endOfGameScreen.classList.add('you-won');
                 endOfGameScreen.textContent = "You won!";
-                section.appendChild(endOfGameScreen);
+                document.body.appendChild(endOfGameScreen);
             }
         }
         gameCompleted();
