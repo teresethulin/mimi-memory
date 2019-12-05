@@ -1,3 +1,10 @@
+:root {
+    --black: #211C19;
+    --palepink: #FEDEE3;
+    --purple: #b1ade2;
+    --babyblue: #7ddff8;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -13,7 +20,7 @@ body {
         monospace;
     font-weight: 400;
     font-style: normal;
-    background-color: #b1ade2;
+    background-color: var(--purple);
     background-image: linear-gradient(315deg, #b1ade2 0%, #7ddff8 74%);
 
 }
@@ -40,11 +47,10 @@ h1 {
 }
 
 button {
-    width: 10vw;
+    width: 12vw;
     height: 5vh;
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    border-radius: 100px;
-    color: rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--black);
+    color: var(--black);
     text-align: center;
     text-transform: uppercase;
     font-family: source-code-pro,
@@ -55,13 +61,11 @@ button {
     letter-spacing: 0.1em;
     margin-bottom: 5vh;
     cursor: pointer;
-    background-color: transparent;
-    transition: border-color .45s cubic-bezier(0.25, 1, 0.33, 1),
-        color .45s cubic-bezier(0.25, 1, 0.33, 1);
+    background-color: var(--babyblue);
+    box-shadow: 4px 4px var(--black);
 }
 
 button:hover {
-    background-color: #D5B187;
     color: white;
     border: 2px solid white;
 }
