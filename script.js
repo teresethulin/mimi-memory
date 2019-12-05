@@ -2,7 +2,7 @@
 
 
 const gameBoard = document.querySelector('.gameboard');
-const cardsFlipped = document.querySelectorAll('.card-front');
+// const cardsFlipped = document.querySelectorAll('.card-front');
 let pairs = 0;
 
 
@@ -41,8 +41,10 @@ const cardImages = [{
 ]
 
 // Duplicates array so we now have 8x8 images
-const allImages = cardImages.concat(cardImages);
+const allCardImages = cardImages.concat(cardImages);
 
+
+// Shuffles all cards
 const shuffleCards = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -50,7 +52,6 @@ const shuffleCards = (array) => {
     }
     return array;
 }
-
 
 
 // Create cards with data from the image array
@@ -64,7 +65,7 @@ const createCards = (name, image) => {
 
 // Resets board
 const resetBoard = () => {
-    hasFlippedCard = false;
+    isCardFlipped = false;
     lockBoard = false;
     firstCard = null;
     secondCard = null;
@@ -75,21 +76,19 @@ const flipCard = (event) => {
 
     if (lockBoard) return;
 
-
-
     if (event.currentTarget === firstCard) return;
 
     event.currentTarget.classList.add('flip');
 
-    if (!hasFlippedCard) {
+    if (!isCardFlipped) {
         //first click
-        hasFlippedCard = true;
+        isCardFlipped = true;
         firstCard = event.currentTarget;
         return;
 
     } else {
         //second click
-        hasFlippedCard = false;
+        isCardFlipped = false;
         secondCard = event.currentTarget;
 
         checkForMatch();
@@ -97,19 +96,19 @@ const flipCard = (event) => {
     }
 }
 
-// Generate cards to game board
+
+// Generate cards to game board at start of game
 const startGame = () => {
     pairs = 0;
     gameBoard.innerHTML = "";
 
-    const backgroundMusic = new Audio('./media/audio/mimi-mingle-pitched.mp3');
-
-    const shuffledImages = shuffleCards(allImages);
+    const shuffledImages = shuffleCards(allCardImages);
     shuffledImages.forEach(image => {
 
         const cardFront = createCards(image.name, image.image);
         gameBoard.innerHTML += cardFront;
     });
+
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => card.addEventListener('click', flipCard));
 };
@@ -117,7 +116,7 @@ startGame();
 
 
 // Default values
-let hasFlippedCard, lockBoard = false;
+let isCardFlipped, lockBoard = false;
 let firstCard, secondCard;
 
 
@@ -144,8 +143,6 @@ const checkForMatch = () => {
 }
 
 
-
-
 // Function for unflipping cards if it's not a match
 const unflipCards = () => {
 
@@ -166,7 +163,8 @@ const unflipCards = () => {
 
 
 // Audio that plays if cards match
-const cardSoundOnClick = new Audio('./media/audio/mimi-jingle-2x.mp3');
+const jingleCardsMatch = new Audio('./media/audio/mimi-jingle-2x.mp3');
+
 
 // Function for locking clicked cards if it's a match
 const cardsMatched = () => {
@@ -174,19 +172,14 @@ const cardsMatched = () => {
     // it's a match!
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    cardSoundOnClick.play();
+    jingleCardsMatch.play();
     pairs += 1;
 
     resetBoard();
 }
 
-// const startGame = () => {
-//     generateCards();
-
-// }
-
 
 const button = document.querySelector('.replay-button');
 
-// Restart game
+// Restart game on click of button
 button.addEventListener('click', startGame);
