@@ -63,7 +63,7 @@ const shuffleCards = (array) => {
 const createCards = (name, image) => {
     return `<div class="card" data-id=${name}>
     <img class="card-front" src="${image}">
-    <img class="card-back" src="https://images.unsplash.com/photo-1560263816-d704d83cce0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80">
+    <div class="card-back"></div>
     </div>`;
 };
 
