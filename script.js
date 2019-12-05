@@ -1,11 +1,15 @@
 "use strict"
 
 
+// Game board section
 const gameBoard = document.querySelector('.gameboard');
-// const cardsFlipped = document.querySelectorAll('.card-front');
+
+
+// Counter for counting matched cards so we know when game is completed
 let pairs = 0;
 
 
+// Array of 8 images for front of cards
 const cardImages = [{
         image: 'http://los40es00.epimg.net/los40/imagenes/2009/08/02/actualidad/1249164000_294754_1273518780.jpg',
         name: 'eminem'
@@ -40,6 +44,7 @@ const cardImages = [{
     },
 ]
 
+
 // Duplicates array so we now have 8x8 images
 const allCardImages = cardImages.concat(cardImages);
 
@@ -72,6 +77,7 @@ const resetBoard = () => {
 }
 
 
+// Flip cards on click
 const flipCard = (event) => {
 
     if (lockBoard) return;
@@ -102,14 +108,18 @@ const startGame = () => {
     pairs = 0;
     gameBoard.innerHTML = "";
 
+    // All shuffled images
     const shuffledImages = shuffleCards(allCardImages);
     shuffledImages.forEach(image => {
 
+        // Front of card
         const cardFront = createCards(image.name, image.image);
         gameBoard.innerHTML += cardFront;
     });
 
+    // Card div
     const cards = document.querySelectorAll('.card');
+
     cards.forEach(card => card.addEventListener('click', flipCard));
 };
 startGame();
@@ -126,6 +136,7 @@ const checkForMatch = () => {
     if (firstCard.dataset.id === secondCard.dataset.id) {
         cardsMatched();
 
+        // End of game screen
         const gameCompleted = () => {
             if (pairs === 8) {
                 const section = document.querySelector('section');
