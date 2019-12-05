@@ -141,7 +141,7 @@ const checkForMatch = () => {
             if (pairs === 1) {
                 const section = document.querySelector('section');
                 const endOfGameScreen = document.createElement('div');
-                endOfGameScreen.classList.add('you-won');
+                endOfGameScreen.classList.add('winning-screen');
                 endOfGameScreen.textContent = "You won!";
                 document.body.appendChild(endOfGameScreen);
             }
