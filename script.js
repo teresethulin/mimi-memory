@@ -111,12 +111,12 @@ const flipCard = (event) => {
 
 // Generate cards to game board at start of game
 const startGame = () => {
-    endOfGameScreen.classList.toggle('visible');
-    h1.classList.toggle('visible');
-    buttonPlayAgain.classList.toggle('visible');
 
     pairs = 0;
     gameBoard.innerHTML = "";
+    endOfGameScreen.classList.remove('visible');
+    h1.classList.remove('visible');
+    buttonPlayAgain.classList.remove('visible');
 
     // All shuffled images
     const shuffledImages = shuffleCards(allCardImages);
@@ -149,13 +149,11 @@ const checkForMatch = () => {
 
         // End of game screen
         const gameCompleted = () => {
-            if (pairs === 1) {
+            if (pairs === 8) {
 
-
-
-                endOfGameScreen.classList.toggle('visible');
-                h1.classList.toggle('visible');
-                buttonPlayAgain.classList.toggle('visible');
+                endOfGameScreen.classList.add('visible');
+                h1.classList.add('visible');
+                buttonPlayAgain.classList.add('visible');
             }
         }
         gameCompleted();
