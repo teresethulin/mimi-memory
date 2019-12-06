@@ -19,27 +19,9 @@
     transition: transform .4s;
 }
 
-@keyframes wiggle {
-    0% {
-        transform: rotate(2deg);
-    }
-
-    50% {
-        transform: rotateY(-2deg);
-    }
-
-    100% {
-        transform: rotate(2deg);
-    }
-}
-
 .card.flip {
     transform: rotateY(180deg);
     transition: .8s ease-in;
-}
-
-.card.wiggle {
-    animation: wiggle .4s ease-out;
 }
 
 .card-front,
