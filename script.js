@@ -4,6 +4,12 @@
 // Game board section
 const gameBoard = document.querySelector('.gameboard');
 
+const body = document.querySelector('body');
+
+// End of game screen and play again button
+const endOfGameScreen = document.querySelector('.end-screen');
+const h1 = document.querySelector('h1');
+const buttonPlayAgain = document.querySelector('.button-play-again');
 
 // Counter for counting matched cards so we know when game is completed
 let pairs = 0;
@@ -105,6 +111,10 @@ const flipCard = (event) => {
 
 // Generate cards to game board at start of game
 const startGame = () => {
+    endOfGameScreen.classList.toggle('visible');
+    h1.classList.toggle('visible');
+    buttonPlayAgain.classList.toggle('visible');
+
     pairs = 0;
     gameBoard.innerHTML = "";
 
@@ -130,6 +140,7 @@ let isCardFlipped, lockBoard = false;
 let firstCard, secondCard;
 
 
+
 // Function for checking if cards match
 const checkForMatch = () => {
 
@@ -138,12 +149,13 @@ const checkForMatch = () => {
 
         // End of game screen
         const gameCompleted = () => {
-            if (pairs === 8) {
-                const section = document.querySelector('section');
-                const endOfGameScreen = document.createElement('div');
-                endOfGameScreen.classList.add('winning-screen');
-                endOfGameScreen.textContent = "You won!";
-                document.body.appendChild(endOfGameScreen);
+            if (pairs === 1) {
+
+
+
+                endOfGameScreen.classList.toggle('visible');
+                h1.classList.toggle('visible');
+                buttonPlayAgain.classList.toggle('visible');
             }
         }
         gameCompleted();
@@ -190,7 +202,7 @@ const cardsMatched = () => {
 }
 
 
-const button = document.querySelector('.replay-button');
+// const button = document.querySelector('.replay-button');
 
-// Restart game on click of button
-button.addEventListener('click', startGame);
+// // Restart game on click of button
+// button.addEventListener('click', startGame);
