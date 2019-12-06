@@ -1,0 +1,19 @@
+.end-screen {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    color: var(--black);
+    background-color: rgba(254, 222, 227, 0.9);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+}
+
+
+.end-screen.visible {
+    visibility: visible;
+}

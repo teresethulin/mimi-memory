@@ -16,39 +16,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: source-code-pro,
-        monospace;
+    font-family: "source-code-pro",
+        "monospace";
     font-weight: 400;
     font-style: normal;
     background-color: var(--purple);
     background-image: linear-gradient(315deg, #b1ade2 0%, #7ddff8 74%);
     position: relative;
-}
-
-.gameboard {
-    width: 95vw;
-    height: 95vw;
-    margin: auto;
-    display: flex;
-    flex-flow: wrap;
-    perspective: 80vw;
-    padding: 1%;
-    border-radius: 3%;
-}
-
-.end-screen {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    color: var(--black);
-    background-color: rgba(254, 222, 227, 0.9);
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-    visibility: hidden;
 }
 
 h1 {
@@ -57,59 +31,14 @@ h1 {
     z-index: 2;
 }
 
-.button-play-again {
-    width: 50vw;
-    height: 7vh;
-    background-color: var(--babyblue);
-    border: 2px solid var(--black);
-    box-shadow: 4px 4px var(--black);
-    font-family: "source-code-pro";
-    color: var(--black);
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    bottom: 0;
-    margin-bottom: 25vh;
-    cursor: pointer;
-    z-index: 3;
-    position: absolute;
-    align-self: flex-end;
-    visibility: hidden;
-}
-
-.button-play-again:hover {
-    background-color: var(--purple);
-    transform: scale(1.2);
-    transition: 0.6s ease-in-out 0s;
-}
-
-
-.button-play-again.visible {
-    visibility: visible;
-}
-
-.end-screen.visible {
-    visibility: visible;
-}
-
 h1.visible {
     visibility: visible;
 }
 
 
 @media (min-width: 1024px) {
-    .gameboard {
-        width: 40vw;
-        height: 40vw;
-    }
 
     h1 {
         font-size: 8em;
-    }
-
-    .button-play-again {
-        width: 15vw;
-        height: 7vh;
-        font-size: 1em;
     }
 }

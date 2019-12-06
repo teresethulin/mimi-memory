@@ -1,0 +1,20 @@
+/* Game board */
+
+.gameboard {
+    width: 95vw;
+    height: 95vw;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    perspective: 80vw;
+    padding: 1%;
+    border-radius: 3%;
+}
+
+
+@media (min-width: 1024px) {
+    .gameboard {
+        width: 40vw;
+        height: 40vw;
+    }
+}
