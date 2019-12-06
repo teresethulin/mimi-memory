@@ -9,6 +9,11 @@
     border-radius: 5%;
 }
 
+.card:hover {
+    transform: scale(1.4);
+    z-index: 3;
+}
+
 .card:active {
     transform: scale(.95);
     transition: transform .4s;

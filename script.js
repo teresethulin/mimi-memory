@@ -138,7 +138,7 @@ const checkForMatch = () => {
 
         // End of game screen
         const gameCompleted = () => {
-            if (pairs === 1) {
+            if (pairs === 8) {
                 const section = document.querySelector('section');
                 const endOfGameScreen = document.createElement('div');
                 endOfGameScreen.classList.add('winning-screen');
