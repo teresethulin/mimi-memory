@@ -26,8 +26,8 @@ body {
 }
 
 .gameboard {
-    width: 40vw;
-    height: 40vw;
+    width: 95vw;
+    height: 95vw;
     margin: auto;
     display: flex;
     flex-flow: wrap;
@@ -42,7 +42,6 @@ body {
     margin: 0 auto;
     color: var(--black);
     background-color: rgba(254, 222, 227, 0.9);
-    font-size: 4em;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -54,12 +53,12 @@ body {
 
 h1 {
     visibility: hidden;
-    font-size: 2em;
+    font-size: 3em;
     z-index: 2;
 }
 
 .button-play-again {
-    width: 15vw;
+    width: 50vw;
     height: 7vh;
     background-color: var(--babyblue);
     border: 2px solid var(--black);
@@ -68,7 +67,6 @@ h1 {
     color: var(--black);
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.4em;
     letter-spacing: 0.1em;
     bottom: 0;
     margin-bottom: 25vh;
@@ -96,4 +94,22 @@ h1 {
 
 h1.visible {
     visibility: visible;
+}
+
+
+@media (min-width: 1024px) {
+    .gameboard {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    h1 {
+        font-size: 8em;
+    }
+
+    .button-play-again {
+        width: 15vw;
+        height: 7vh;
+        font-size: 1em;
+    }
 }
