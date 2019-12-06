@@ -20,8 +20,9 @@
 
 .button-play-again:hover {
     background-color: var(--purple);
-    transform: scale(1.2);
-    transition: 0.6s ease-in-out 0s;
+    animation: wiggle 0.4s;
+    /* transform: scale(1.2);
+    transition: 0.6s ease-in-out 0s; */
 }
 
 

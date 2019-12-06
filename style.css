@@ -29,12 +29,23 @@ h1 {
     visibility: hidden;
     font-size: 3em;
     z-index: 2;
+    animation: bounce 1s ease-in-out infinite alternate;
 }
 
 h1.visible {
     visibility: visible;
 }
 
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-10vh);
+    }
+
+    100% {
+        transform: translateY(0), skewX(3deg);
+    }
+}
 
 @media (min-width: 1024px) {
 

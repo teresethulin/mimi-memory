@@ -1,7 +1,6 @@
 .end-screen {
     width: 100vw;
     height: 100vh;
-    margin: 0 auto;
     color: var(--black);
     background-color: rgba(254, 222, 227, 0.9);
     font-weight: 700;
@@ -11,9 +10,30 @@
     position: absolute;
     z-index: 1;
     visibility: hidden;
+    animation: scale 1s ease-in 0s;
 }
 
 
 .end-screen.visible {
     visibility: visible;
+}
+
+
+@keyframes scale {
+    0% {
+        transform: scale(0.1, 0.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .end-screen {
+        width: 100vw;
+        height: 50vw;
+    }
 }
