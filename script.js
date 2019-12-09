@@ -55,8 +55,7 @@ const cardImages = [
     name: "precious"
   },
   {
-    image:
-      "https://66.media.tumblr.com/88cae99a097fb270c77fc7707b48553b/tumblr_p2rgp2sbb11uhlg22o1_1280.jpg",
+    image: "https://data.whicdn.com/images/331548958/original.gif?t=1560649676",
     name: "fantasy"
   }
 ];
