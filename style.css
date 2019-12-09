@@ -1,55 +1,41 @@
 :root {
-    --black: #211C19;
-    --palepink: #FEDEE3;
-    --purple: #b1ade2;
-    --babyblue: #7ddff8;
+  --black: #211c19;
+  --palepink: #fedee3;
+  --purple: #b1ade2;
+  --babyblue: #7ddff8;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "source-code-pro",
-        "monospace";
-    font-weight: 400;
-    font-style: normal;
-    background-color: var(--purple);
-    background-image: linear-gradient(315deg, #b1ade2 0%, #7ddff8 74%);
-    position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "source-code-pro", "monospace";
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--purple);
+  background-image: linear-gradient(315deg, #b1ade2 0%, #7ddff8 74%);
+  position: relative;
 }
-
-h1 {
-    visibility: hidden;
-    font-size: 3em;
-    z-index: 2;
-    animation: bounce 1s ease-in-out infinite alternate;
-}
-
-h1.visible {
-    visibility: visible;
-}
-
 
 @keyframes bounce {
-    0% {
-        transform: translateY(-10vh);
-    }
+  0% {
+    transform: translateY(-10vh);
+  }
 
-    100% {
-        transform: translateY(0), skewX(3deg);
-    }
+  100% {
+    transform: translateY(0), skewX(3deg);
+  }
 }
 
 @media (min-width: 1024px) {
-
-    h1 {
-        font-size: 8em;
-    }
+  h1 {
+    font-size: 8em;
+  }
 }

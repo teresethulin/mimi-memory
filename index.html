@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://use.typekit.net/lmo8cgf.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="gameboard.css">
-    <link rel="stylesheet" href="end-screen.css">
-    <link rel="stylesheet" href="button.css">
-    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lmo8cgf.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="gameboard.css" />
+    <link rel="stylesheet" href="end-screen.css" />
+    <link rel="stylesheet" href="button.css" />
+    <link rel="stylesheet" href="card.css" />
 
     <title>Mimi Memory</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <section class="win-screen">
+      <h1 class="h1-start">Mimi Memory</h1>
 
-    <section class="gameboard">
-
+      <button class="button-start-game" type="button" onclick="startGame()">
+        Play game!
+      </button>
     </section>
+
+    <section class="gameboard"></section>
 
     <section class="end-screen">
+      <h1 class="h1-end">Well done!</h1>
 
-        <h1>Well done!</h1>
-
-        <button class="button-play-again" type="button" onclick="startGame()">Play again?</button>
-
+      <button class="button-play-again" type="button" onclick="startGame()">
+        Play again?
+      </button>
     </section>
 
-    <iframe width="100%" height="60"
-        src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&hide_artwork=1&autoplay=1&feed=%2FDJ_MOKO%2Fmariah-carey-best-vol2-dj-moko-mixxx-%2F"
-        frameborder="0" allow="autoplay"></iframe>
+    <iframe
+      width="100%"
+      height="60"
+      src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&hide_artwork=1&autoplay=1&feed=%2FDJ_MOKO%2Fmariah-carey-best-vol2-dj-moko-mixxx-%2F"
+      frameborder="0"
+      allow="autoplay"
+    ></iframe>
 
     <script src="functions.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

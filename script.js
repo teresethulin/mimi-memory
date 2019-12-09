@@ -5,13 +5,20 @@ const gameBoard = document.querySelector(".gameboard");
 
 const body = document.querySelector("body");
 
+// Welcome screen on load of page
+const welcomeScreen = document.querySelector(".welcome-screen");
+const startTitle = document.querySelector(".h1-start");
+const buttonStartGame = document.querySelector(".button-start-game");
+
 // End of game screen and play again button
 const endOfGameScreen = document.querySelector(".end-screen");
-const h1 = document.querySelector("h1");
+const endTitle = document.querySelector(".h1-end");
 const buttonPlayAgain = document.querySelector(".button-play-again");
 
 // Counter for counting matched cards so we know when game is completed
 let pairs = 0;
+
+window.onload = () => {};
 
 // Array of 8 images for front of cards
 const cardImages = [
@@ -111,7 +118,7 @@ const startGame = () => {
   pairs = 0;
   gameBoard.innerHTML = "";
   endOfGameScreen.classList.remove("visible");
-  h1.classList.remove("visible");
+  endTitle.classList.remove("visible");
   buttonPlayAgain.classList.remove("visible");
 
   // All shuffled images
@@ -144,7 +151,7 @@ const checkForMatch = () => {
       if (pairs === 1) {
         setTimeout(() => {
           endOfGameScreen.classList.add("visible");
-          h1.classList.add("visible");
+          endTitle.classList.add("visible");
           buttonPlayAgain.classList.add("visible");
         }, 1500);
       }

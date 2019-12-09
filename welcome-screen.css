@@ -1,4 +1,4 @@
-.end-screen {
+.welcome-screen {
   width: 100vw;
   height: 100vh;
   color: var(--black);
@@ -13,18 +13,18 @@
   animation: scale 1s ease-in 0s;
 }
 
-.end-screen.visible {
+.welcome-screen.visible {
   visibility: visible;
 }
 
-.h1-end {
+.h1-start {
   visibility: hidden;
   font-size: 3em;
   z-index: 2;
   animation: bounce 1s ease-in-out infinite alternate;
 }
 
-.h1-end.visible {
+.h1-start.visible {
   visibility: visible;
 }
 
@@ -39,7 +39,7 @@
 }
 
 @media (min-width: 1024px) {
-  .end-screen {
+  .win-screen {
     width: 100vw;
     height: 50vw;
   }
