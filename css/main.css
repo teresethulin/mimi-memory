@@ -41,6 +41,3 @@ body {
     transform: translateY(0), skewX(3deg);
   }
 }
-
-@media (min-width: 1024px) {
-}
