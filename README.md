@@ -31,8 +31,8 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 
 ## Testers
--
--
+- [Maja Alin](https://github.com/majaalin)
+- [Bernhard Stedt](https://github.com/Vehx)
 
 
 ## Code review
