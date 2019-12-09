@@ -1,45 +1,53 @@
 .card {
-    width: 23%;
-    height: 23%;
-    margin: 1%;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform 1.2s;
-    border-radius: 5%;
-}
-
-.card:hover {
-    transform: scale(1.4);
-    z-index: 3;
+  width: 20%;
+  height: 20%;
+  margin: 2%;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 1.2s;
+  border-radius: 5%;
 }
 
 .card:active {
-    transform: scale(.95);
-    transition: transform .4s;
+  transform: scale(0.95);
+  transition: transform 0.4s;
 }
 
 .card.flip {
-    transform: rotateY(180deg);
-    transition: .8s ease-in;
+  transform: rotateY(180deg);
+  transition: 0.8s ease-in;
 }
 
 .card-front,
 .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 3%;
-    backface-visibility: hidden;
-    box-shadow: 4px 4px #211C19;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 3%;
+  backface-visibility: hidden;
+  box-shadow: 4px 4px #211c19;
 }
 
 .card-front {
-    transform: rotateY(180deg);
-    background-color: #211C19;
+  transform: rotateY(180deg);
+  background-color: #211c19;
 }
 
 .card-back {
-    background-color: #FEDEE3;
-    border: 2px solid #211C19;
+  background-color: #fedee3;
+  border: 2px solid #211c19;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 23%;
+    height: 23%;
+    margin: 1%;
+  }
+
+  .card:hover {
+    transform: scale(1.4);
+    z-index: 3;
+  }
 }

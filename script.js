@@ -149,7 +149,7 @@ const checkForMatch = () => {
 
         // End of game screen
         const gameCompleted = () => {
-            if (pairs === 8) {
+            if (pairs === 1) {
 
                 endOfGameScreen.classList.add('visible');
                 h1.classList.add('visible');
