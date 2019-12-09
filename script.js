@@ -146,7 +146,7 @@ const checkForMatch = () => {
 
     // End of game screen
     const gameCompleted = () => {
-      if (pairs === 1) {
+      if (pairs === 8) {
         setTimeout(() => {
           endOfGameScreen.classList.add("visible");
           endTitle.classList.add("visible");
