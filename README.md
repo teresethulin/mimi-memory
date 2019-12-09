@@ -8,7 +8,7 @@
     <br>
 </h1>
 
-A JavaScript memory game dedicated to one of the best-selling music artists of all time: Mariah Carey.
+A JavaScript memory game dedicated to one of the best-selling music artists of all time: [Mariah Carey](https://www.mariahcarey.com/).
 
 
 ## Play game:
@@ -24,6 +24,13 @@ https://mimi-memory.netlify.com/
 
 ## Authors
 - [Terese Thulin](https://github.com/teresethulin)
+
+
+## Installation
+1. Clone [this directory](https://github.com/teresethulin/mimi-memory.git) with Github Desktop or in terminal
+
+    `git clone https://github.com/teresethulin/mimi-memory.git`
+2. Open index.html in your browser.
 
 
 ## License
