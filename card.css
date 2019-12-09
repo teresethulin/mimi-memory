@@ -14,6 +14,11 @@
   transition: transform 0.4s;
 }
 
+.card:hover {
+  transform: none;
+  z-index: 3;
+}
+
 .card.flip {
   transform: rotateY(180deg);
   transition: 0.8s ease-in;
@@ -46,8 +51,8 @@
     margin: 1%;
   }
 
-  .card:hover {
+  .card-back:hover {
     transform: scale(1.4);
-    z-index: 3;
+    transition: transform 0.7s ease-in-out;
   }
 }
