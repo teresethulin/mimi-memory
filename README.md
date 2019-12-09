@@ -42,7 +42,12 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 - [Bernhard Stedt](https://github.com/Vehx)
 
 
-## Code review
+## Code review by Bernhard Stedt
+* [index.html:L-45] (https://github.com/teresethulin/mimi-memory/blob/a0d7f87498ac2021e3e0657ce1f27e963080a502/index.html#L45) Theres a script tag calling for functions.js that no longer exists
+* [script.js:L-104] (https://github.com/teresethulin/mimi-memory/blob/a0d7f87498ac2021e3e0657ce1f27e963080a502/script.js#L104) Since you use if statements above that returns, there is no need to use an else statement
+* [script.js:L147-L155] (https://github.com/teresethulin/mimi-memory/blob/a0d7f87498ac2021e3e0657ce1f27e963080a502/script.js#L147-L155) Nesting a function inside another function works while the functions are small, when they get bigger and more complex it gets harder to read and follow the code, something to think about
+* [index.html:L7-L13] (https://github.com/teresethulin/mimi-memory/blob/a0d7f87498ac2021e3e0657ce1f27e963080a502/index.html#L7-L13) I get some type of error in my browsers console about the MIME type mismatching, adding type='text/css' may help, I'm not 100% sure
+* [main.css:L45-L46] (https://github.com/teresethulin/mimi-memory/blob/a0d7f87498ac2021e3e0657ce1f27e963080a502/css/main.css#L45-L46) Looks like you forgot to remove a media query that you no longer use, easy to forget and easy to fix :)
 
 
 ## Acknowledgments
