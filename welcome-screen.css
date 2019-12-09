@@ -37,10 +37,6 @@
   visibility: hidden;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 @keyframes scale {
   0% {
     transform: scale(0.1, 0.1);
