@@ -151,7 +151,7 @@ const checkForMatch = () => {
           endOfGameScreen.classList.add("visible");
           endTitle.classList.add("visible");
           buttonPlayAgain.classList.add("visible");
-        }, 1500);
+        }, 1300);
       }
     };
     gameCompleted();
