@@ -28,10 +28,6 @@ body {
   visibility: visible;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .removed {
   display: none;
 }

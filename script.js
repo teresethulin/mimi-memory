@@ -111,17 +111,14 @@ const flipCard = event => {
   }
 };
 
-// Generate cards to game board at start of game
+// Start game and generate cards to game board
 const startGame = () => {
+  welcomeScreen.classList.add("removed");
   pairs = 0;
   gameBoard.innerHTML = "";
   endOfGameScreen.classList.remove("visible");
   endTitle.classList.remove("visible");
   buttonPlayAgain.classList.remove("visible");
-
-  // welcomeScreen.classList.add("hidden");
-  // startTitle.classList.add("hidden");
-  // buttonStartGame.classList.add("hidden");
 
   // All shuffled images
   const shuffledImages = shuffleCards(allCardImages);
@@ -136,7 +133,6 @@ const startGame = () => {
 
   cards.forEach(card => card.addEventListener("click", flipCard));
 };
-startGame();
 
 // Default values
 let isCardFlipped,

@@ -12,8 +12,8 @@
   animation: scale 1s ease-in 0s;
 }
 
-.welcome-screen.hidden {
-  visibility: hidden;
+.welcome-screen.removed {
+  display: none;
 }
 
 .h1-start {
@@ -25,16 +25,8 @@
   animation: bounce 1s ease-in-out infinite alternate;
 }
 
-.h1-start.hidden {
-  visibility: hidden;
-}
-
-.welcome-screen > button {
+.button-start-game {
   margin-bottom: 10vh;
-}
-
-.welcome-screen > button.hidden {
-  visibility: hidden;
 }
 
 @keyframes scale {
@@ -52,7 +44,7 @@
     font-size: 9em;
   }
 
-  .welcome-screen > button {
+  .button-start-game {
     margin-bottom: 20vh;
   }
 }
