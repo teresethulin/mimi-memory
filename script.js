@@ -60,7 +60,7 @@ const cardImages = [
   }
 ];
 
-// Duplicates array so we now have 8x8 images
+// Duplicates array so we now have 2x8 images
 const allCardImages = cardImages.concat(cardImages);
 
 // Shuffles all cards
