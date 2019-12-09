@@ -1,16 +1,13 @@
 <img src="/media/images/mimi-memory-preview.png" alt="Mimi Memory" align="center">
 
+A JavaScript memory game dedicated to one of the best-selling music artists of all time: [Mariah Carey](https://www.mariahcarey.com/).
+
 
 <h1 align="center">
     <br>
     <img src="https://media.giphy.com/media/10w2kccsAdggZG/giphy.gif" alt="Mariah Carey" align="center">
     <br>
-    <br>
-        Mimi Memory
-    <br>
 </h1>
-
-A JavaScript memory game dedicated to one of the best-selling music artists of all time: [Mariah Carey](https://www.mariahcarey.com/).
 
 
 ## Play game:
