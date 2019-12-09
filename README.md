@@ -1,3 +1,5 @@
+<img src="/media/images/mimi-memory-preview.png" alt="Mimi Memory" align="center">
+
 
 <h1 align="center">
     <br>
