@@ -47,4 +47,8 @@
     width: 100vw;
     height: 50vw;
   }
+
+  .h1-end {
+    font-size: 8em;
+  }
 }
