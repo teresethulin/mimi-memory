@@ -5,7 +5,7 @@ const gameBoard = document.querySelector(".gameboard");
 
 const body = document.querySelector("body");
 
-// Welcome screen on load of page
+// Welcome screen
 const welcomeScreen = document.querySelector(".welcome-screen");
 const startTitle = document.querySelector(".h1-start");
 const buttonStartGame = document.querySelector(".button-start-game");
@@ -17,8 +17,6 @@ const buttonPlayAgain = document.querySelector(".button-play-again");
 
 // Counter for counting matched cards so we know when game is completed
 let pairs = 0;
-
-window.onload = () => {};
 
 // Array of 8 images for front of cards
 const cardImages = [
@@ -121,6 +119,10 @@ const startGame = () => {
   endTitle.classList.remove("visible");
   buttonPlayAgain.classList.remove("visible");
 
+  //   welcomeScreen.classList.add("invisible");
+  //   startTitle.classList.add("invisible");
+  //   buttonStartGame.classList.add("invisible");
+
   // All shuffled images
   const shuffledImages = shuffleCards(allCardImages);
   shuffledImages.forEach(image => {
@@ -190,8 +192,3 @@ const cardsMatched = () => {
 
   resetBoard();
 };
-
-// const button = document.querySelector('.replay-button');
-
-// // Restart game on click of button
-// button.addEventListener('click', startGame);

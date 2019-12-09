@@ -2,30 +2,43 @@
   width: 100vw;
   height: 100vh;
   color: var(--black);
-  background-color: rgba(254, 222, 227, 0.9);
+  background-color: rgba(254, 222, 227, 1);
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   z-index: 1;
-  visibility: hidden;
   animation: scale 1s ease-in 0s;
 }
 
-.welcome-screen.visible {
-  visibility: visible;
+.welcome-screen.invisible {
+  visibility: hidden;
 }
 
 .h1-start {
-  visibility: hidden;
-  font-size: 3em;
+  font-size: 5em;
+  color: var(--purple);
+  text-align: center;
+  -webkit-text-stroke: 2px var(--black);
   z-index: 2;
   animation: bounce 1s ease-in-out infinite alternate;
 }
 
-.h1-start.visible {
-  visibility: visible;
+.h1-start.invisible {
+  visibility: hidden;
+}
+
+.welcome-screen > button {
+  margin-bottom: 10vh;
+}
+
+.welcome-screen > button.invisible {
+  visibility: hidden;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 @keyframes scale {
@@ -39,8 +52,11 @@
 }
 
 @media (min-width: 1024px) {
-  .win-screen {
-    width: 100vw;
-    height: 50vw;
+  .h1-start {
+    font-size: 9em;
+  }
+
+  .welcome-screen > button {
+    margin-bottom: 20vh;
   }
 }
