@@ -119,9 +119,9 @@ const startGame = () => {
   endTitle.classList.remove("visible");
   buttonPlayAgain.classList.remove("visible");
 
-  //   welcomeScreen.classList.add("invisible");
-  //   startTitle.classList.add("invisible");
-  //   buttonStartGame.classList.add("invisible");
+  // welcomeScreen.classList.add("hidden");
+  // startTitle.classList.add("hidden");
+  // buttonStartGame.classList.add("hidden");
 
   // All shuffled images
   const shuffledImages = shuffleCards(allCardImages);

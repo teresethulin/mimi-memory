@@ -12,7 +12,7 @@
   animation: scale 1s ease-in 0s;
 }
 
-.welcome-screen.invisible {
+.welcome-screen.hidden {
   visibility: hidden;
 }
 
@@ -25,7 +25,7 @@
   animation: bounce 1s ease-in-out infinite alternate;
 }
 
-.h1-start.invisible {
+.h1-start.hidden {
   visibility: hidden;
 }
 
@@ -33,7 +33,7 @@
   margin-bottom: 10vh;
 }
 
-.welcome-screen > button.invisible {
+.welcome-screen > button.hidden {
   visibility: hidden;
 }
 

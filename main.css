@@ -28,8 +28,12 @@ body {
   visibility: visible;
 }
 
-.invisible {
+.hidden {
   visibility: hidden;
+}
+
+.removed {
+  display: none;
 }
 
 @keyframes bounce {
@@ -43,7 +47,4 @@ body {
 }
 
 @media (min-width: 1024px) {
-  h1 {
-    font-size: 8em;
-  }
 }
